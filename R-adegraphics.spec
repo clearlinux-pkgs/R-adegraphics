@@ -4,20 +4,20 @@
 #
 Name     : R-adegraphics
 Version  : 1.0.15
-Release  : 7
+Release  : 8
 URL      : https://cran.r-project.org/src/contrib/adegraphics_1.0-15.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/adegraphics_1.0-15.tar.gz
 Summary  : An S4 Lattice-Based Package for the Representation of
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-Guerry
-Requires: R-RColorBrewer
-Requires: R-ade4
-Requires: R-sp
+Requires: R-spdep
 BuildRequires : R-Guerry
 BuildRequires : R-RColorBrewer
 BuildRequires : R-ade4
+BuildRequires : R-evaluate
+BuildRequires : R-latticeExtra
 BuildRequires : R-sp
+BuildRequires : R-spdep
 BuildRequires : buildreq-R
 
 %description
@@ -31,10 +31,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1545248197
+export SOURCE_DATE_EPOCH=1552709065
 
 %install
-export SOURCE_DATE_EPOCH=1545248197
+export SOURCE_DATE_EPOCH=1552709065
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -70,8 +70,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library adegraphics|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  adegraphics || :
 
 
 %files
@@ -101,3 +100,31 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/adegraphics/help/paths.rds
 /usr/lib64/R/library/adegraphics/html/00Index.html
 /usr/lib64/R/library/adegraphics/html/R.css
+/usr/lib64/R/library/adegraphics/tests/add.R
+/usr/lib64/R/library/adegraphics/tests/adegraphics.R
+/usr/lib64/R/library/adegraphics/tests/nbgraph.R
+/usr/lib64/R/library/adegraphics/tests/panelSpatial.R
+/usr/lib64/R/library/adegraphics/tests/parameter.R
+/usr/lib64/R/library/adegraphics/tests/s.arrow.R
+/usr/lib64/R/library/adegraphics/tests/s.class.R
+/usr/lib64/R/library/adegraphics/tests/s.corcircle.R
+/usr/lib64/R/library/adegraphics/tests/s.density.R
+/usr/lib64/R/library/adegraphics/tests/s.distri.R
+/usr/lib64/R/library/adegraphics/tests/s.image.R
+/usr/lib64/R/library/adegraphics/tests/s.label.R
+/usr/lib64/R/library/adegraphics/tests/s.logo.R
+/usr/lib64/R/library/adegraphics/tests/s.match.R
+/usr/lib64/R/library/adegraphics/tests/s.traject.R
+/usr/lib64/R/library/adegraphics/tests/s.value.R
+/usr/lib64/R/library/adegraphics/tests/s1d.boxplot.R
+/usr/lib64/R/library/adegraphics/tests/s1d.class.R
+/usr/lib64/R/library/adegraphics/tests/s1d.density.R
+/usr/lib64/R/library/adegraphics/tests/s1d.distri.R
+/usr/lib64/R/library/adegraphics/tests/s1d.gauss.R
+/usr/lib64/R/library/adegraphics/tests/s1d.hist.R
+/usr/lib64/R/library/adegraphics/tests/s1d.label.R
+/usr/lib64/R/library/adegraphics/tests/s1d.match.R
+/usr/lib64/R/library/adegraphics/tests/scatter.R
+/usr/lib64/R/library/adegraphics/tests/table.image.R
+/usr/lib64/R/library/adegraphics/tests/table.value.R
+/usr/lib64/R/library/adegraphics/tests/triangle.R
