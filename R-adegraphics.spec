@@ -4,17 +4,21 @@
 #
 Name     : R-adegraphics
 Version  : 1.0.15
-Release  : 15
+Release  : 16
 URL      : https://cran.r-project.org/src/contrib/adegraphics_1.0-15.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/adegraphics_1.0-15.tar.gz
 Summary  : An S4 Lattice-Based Package for the Representation of
 Group    : Development/Tools
 License  : GPL-2.0+
+Requires: R-Guerry
+Requires: R-RColorBrewer
+Requires: R-ade4
+Requires: R-latticeExtra
+Requires: R-sp
 Requires: R-spdep
 BuildRequires : R-Guerry
 BuildRequires : R-RColorBrewer
 BuildRequires : R-ade4
-BuildRequires : R-evaluate
 BuildRequires : R-latticeExtra
 BuildRequires : R-sp
 BuildRequires : R-spdep
@@ -30,13 +34,13 @@ No detailed description available
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1552709065
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1569353113
 
 %install
-export SOURCE_DATE_EPOCH=1552709065
+export SOURCE_DATE_EPOCH=1569353113
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -65,12 +69,12 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc  adegraphics || :
+R CMD check --no-manual --no-examples --no-codoc adegraphics || :
 
 
 %files
