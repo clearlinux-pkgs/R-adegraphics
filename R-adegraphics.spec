@@ -4,18 +4,16 @@
 #
 Name     : R-adegraphics
 Version  : 1.0.15
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/adegraphics_1.0-15.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/adegraphics_1.0-15.tar.gz
 Summary  : An S4 Lattice-Based Package for the Representation of
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-Guerry
 Requires: R-RColorBrewer
 Requires: R-ade4
 Requires: R-latticeExtra
 Requires: R-sp
-Requires: R-spdep
 BuildRequires : R-Guerry
 BuildRequires : R-RColorBrewer
 BuildRequires : R-ade4
@@ -23,6 +21,7 @@ BuildRequires : R-latticeExtra
 BuildRequires : R-sp
 BuildRequires : R-spdep
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 No detailed description available
@@ -35,10 +34,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1569353113
+export SOURCE_DATE_EPOCH=1571794352
 
 %install
-export SOURCE_DATE_EPOCH=1569353113
+export SOURCE_DATE_EPOCH=1571794352
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
