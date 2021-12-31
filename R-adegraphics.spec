@@ -4,7 +4,7 @@
 #
 Name     : R-adegraphics
 Version  : 1.0.16
-Release  : 36
+Release  : 37
 URL      : https://cran.r-project.org/src/contrib/adegraphics_1.0-16.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/adegraphics_1.0-16.tar.gz
 Summary  : An S4 Lattice-Based Package for the Representation of
@@ -34,10 +34,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1640884642
+export SOURCE_DATE_EPOCH=1640966821
 
 %install
-export SOURCE_DATE_EPOCH=1640884642
+export SOURCE_DATE_EPOCH=1640966821
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
