@@ -4,7 +4,7 @@
 #
 Name     : R-adegraphics
 Version  : 1.0.18
-Release  : 44
+Release  : 45
 URL      : https://cran.r-project.org/src/contrib/adegraphics_1.0-18.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/adegraphics_1.0-18.tar.gz
 Summary  : An S4 Lattice-Based Package for the Representation of
@@ -21,9 +21,6 @@ BuildRequires : R-latticeExtra
 BuildRequires : R-sp
 BuildRequires : R-spdep
 BuildRequires : buildreq-R
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 No detailed description available
@@ -37,10 +34,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1677777715
+export SOURCE_DATE_EPOCH=1678810336
 
 %install
-export SOURCE_DATE_EPOCH=1677777715
+export SOURCE_DATE_EPOCH=1678810336
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
