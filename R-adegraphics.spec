@@ -5,7 +5,7 @@
 #
 Name     : R-adegraphics
 Version  : 1.0.21
-Release  : 51
+Release  : 52
 URL      : https://cran.r-project.org/src/contrib/adegraphics_1.0-21.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/adegraphics_1.0-21.tar.gz
 Summary  : An S4 Lattice-Based Package for the Representation of
